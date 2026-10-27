@@ -5,5 +5,5 @@ The privacy policy ([`index.html`](index.html)) and terms of use ([`terms.html`]
 urgent / important grid by [Will Douglas](https://github.com/DougieWilDaBeast). The pages are
 served with GitHub Pages so the Google Play listing can link them.
 
-The app is on [Google Play](https://play.google.com/store/apps/details?id=com.willjkdouglas.eisenhower_matrix).
+The app's listing is on [Google Play](https://play.google.com/store/apps/details?id=com.willjkdouglas.eisenhower_matrix).
 Its source code is private.
