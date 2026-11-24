@@ -37,7 +37,7 @@
 <body>
 
   <h1>Privacy Policy</h1>
-  <p class="effective-date">Effective date: November 12, 2026</p>
+  <p class="effective-date">Effective date: November 24, 2026</p>
 
   <p>
     Eisenhower Matrix ("the App") is a free task management application with an optional one-time Pro upgrade. Your privacy is important to us.
@@ -51,6 +51,7 @@
   <p>The App stores the following data <strong>locally on your device</strong>:</p>
   <ul>
     <li><strong>Task data</strong> - titles, descriptions, due dates, quadrant assignments, labels, completion status, and recurring task settings.</li>
+    <li><strong>Notes</strong> - short notes you write in the Notes inbox, add from the Quick Capture bubble, or send to the App with Android's Share button from another app (for example a web page title and link). They stay on your device like your tasks.</li>
     <li><strong>App preferences</strong> - theme selection, notification settings, reminder times, and history retention period.</li>
     <li><strong>Device identifier</strong> - a randomly generated ID stored on your device, used solely to identify your backups if you choose to use the backup feature.</li>
   </ul>
@@ -74,13 +75,13 @@
     Automatic backups run in the background, even when the App is closed, until you turn them off:
   </p>
   <ul>
-    <li>Your task data (titles, descriptions, due dates, labels, and settings)</li>
+    <li>Your task data (titles, descriptions, due dates, labels, and settings) and your notes</li>
     <li>Your device identifier (the randomly generated ID described above)</li>
     <li>A timestamp of the backup</li>
     <li>The API key you entered, if you set one, so your server can check the request</li>
   </ul>
   <p>
-    <strong>Local snapshots (Pro).</strong> If you choose a backup folder on your device, the App saves a copy of your tasks and labels into that folder automatically when they change, keeping recent days.
+    <strong>Local snapshots (Pro).</strong> If you choose a backup folder on your device, the App saves a copy of your tasks, notes and labels into that folder automatically when they change, keeping recent days.
     If you pick a folder that syncs to a cloud service (for example Google Drive), that service will receive those files under its own terms.
   </p>
   <p>
@@ -125,9 +126,18 @@
     <li><strong>Run a foreground service</strong> - used only while the floating Quick Capture bubble is active, to keep it visible and responsive. While active, your device shows an ongoing notification. The service does nothing in the background other than display the bubble, and it stops when you dismiss the bubble.</li>
     <li><strong>Exact alarms</strong> - optional. If you allow it, reminders arrive at the exact minute you set instead of a few minutes late. You can turn it off in your device settings.</li>
     <li><strong>Run at startup</strong> - so reminders, scheduled backups and, if you turned it on, the Quick Capture bubble come back after your phone restarts.</li>
-    <li><strong>Internet access</strong> - used only if you configure the optional backup feature.</li>
+    <li><strong>Internet access</strong> - used only if you configure the optional backup feature, or to download the optional on-device voice models described below.</li>
+    <li><strong>Notification access</strong> - only in test versions that include the notification test screen (see below), and only if you turn it on in your phone's settings.</li>
+    <li><strong>Microphone</strong> - only in test versions that include the optional on-device voice features (see below), and only after you turn those on and allow it.</li>
   </ul>
-  <p>The App does <strong>not</strong> record audio and does not have microphone permission. If you tap the microphone button when adding a task, the App opens your phone's own speech recognition service (on most Android phones, Google's). That service listens and passes only the recognised text back to the App, which treats it like typed text. The App never receives or stores any audio. Depending on your phone, the speech service may work on the device or send the audio to its provider, under that provider's privacy policy.</p>
+  <p>In the normal version of the App on Google Play, the App does <strong>not</strong> record audio and does not have microphone permission. If you tap the microphone button when adding a task, the App opens your phone's own speech recognition service (on most Android phones, Google's). That service listens and passes only the recognised text back to the App, which treats it like typed text. The App never receives or stores any audio. Depending on your phone, the speech service may work on the device or send the audio to its provider, under that provider's privacy policy.</p>
+  <p><strong>Optional on-device voice features (test versions only).</strong> Versions of the App given to testers may include voice features that run entirely on your phone. They are off until you turn them on. If you do:</p>
+  <ul>
+    <li>The App downloads speech and language model files once, from Hugging Face (huggingface.co) and Qualcomm (qaihub-public-assets.s3.us-west-2.amazonaws.com). Like any download, those sites see your device's internet address. No task data is sent.</li>
+    <li>The App asks for microphone permission. Audio is recorded only while you hold or tap the voice button, is turned into text on your phone, and is never sent anywhere. Voice commands are not saved. The test screen for these features can save test recordings on your phone if you choose to, and they are deleted when you delete them or uninstall the App.</li>
+    <li>Changes made by voice are listed in a "Changed by voice" log that stays on your phone.</li>
+  </ul>
+  <p><strong>Notification test screen (test versions only).</strong> Test versions may also include a hidden screen that checks whether email notifications could become notes later. It only works if you grant notification access in your phone's settings. It reads notifications from Gmail, Outlook and Samsung Email only, keeps the last 40 in memory while the App runs, never saves or sends them, and only shares them if you tap Export. You can remove the access at any time in your phone's settings.</p>
   <p>The App does <strong>not</strong> use the camera, location, contacts, or any other sensitive device sensors.</p>
 
   <h2>7. Data Sharing</h2>
